@@ -12,3 +12,26 @@ class Solution:
             return isMirror(tree1.left, tree2.right) and isMirror(tree1.right, tree2.left)
 
         return isMirror(root.left, root.right)
+
+
+class Solution:
+    def isSymmetric(self, root):
+        stack = []
+        if root:
+            stack.append([root.left, root.right])
+        else:
+            return True
+
+        while stack:
+            tree1, tree2 = stack.pop()
+
+            if tree1 and tree2:
+                if tree1.val != tree2.val:
+                    return False
+                stack.append([tree1.left, tree2.right])
+                stack.append([tree1.right, tree2.left])
+
+            elif tree1 or tree2:
+                return False
+
+        return True
