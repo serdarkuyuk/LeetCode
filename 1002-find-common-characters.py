@@ -2,7 +2,7 @@ A = ["acabcddd","bcbdbcbd","baddbadb","cbdddcac","aacbcccd","ccccddda","cababaab
 # A = ["bella","label","roller"]
 # A =["cool","lock","cook"]
 import collections
-m = collections.defaultdict([0]*len(A))
+m = collections.defaultdict(lambda:[0]*len(A))
 
 # alphabetDict = defaultdict(list)
 for i in range(len(A)):
