@@ -27,5 +27,6 @@ for num in arr1:
 mylist = []
 for key,val in mydict.items():
     mylist += [key]*val
+
 mylist.extend(sorted(restNumbers))
 print(mylist)
