@@ -7,3 +7,5 @@ for fast in range(len(nums)):
         nums[tail], nums[fast] = nums[fast], nums[tail]
         tail += 1
 print(nums)
+def funct(x):
+    pass
